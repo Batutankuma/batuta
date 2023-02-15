@@ -101,7 +101,7 @@ function createApplication(name, dir, options, done) {
       express: '~4.17.1'
     },
     "devDependencies": {
-      "prisma": "~4.7.1"
+      "prisma": "^4.7.1"
     }
   }
 
@@ -135,19 +135,19 @@ function createApplication(name, dir, options, done) {
   pkg.dependencies['cookie-parser'] = '~1.4.5'
 
   // Prisma client ***** version
-  pkg.dependencies['@prisma/client'] = '~1.4.5'
+  pkg.dependencies['@prisma/client'] = '^1.4.5'
 
   //add bcrypt
-  pkg.dependencies['bcryptjs'] = '~2.4.3'
+  pkg.dependencies['bcryptjs'] = '^2.4.3'
 
   //jsonwebtoken
-  pkg.dependencies['jsonwebtoken'] = '~9.0.0'
+  pkg.dependencies['jsonwebtoken'] = '^9.0.0'
 
   //nodemailer
-  pkg.dependencies['nodemailer'] = '~6.9.1'
+  pkg.dependencies['nodemailer'] = '^6.9.1'
 
   //request
-  pkg.dependencies['request'] = '~2.88.2'
+  pkg.dependencies['request'] = '^2.88.2'
 
   if (dir !== '.') {
     mkdir(dir, '.')
