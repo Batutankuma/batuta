@@ -273,7 +273,7 @@ function createApplication(name, dir, options, done) {
   app.locals.mounts.push({ path: '/users', code: 'usersRouter' })
 
   // Upload router mount
-  app.locals.localModules.usersRouter = './routes/upload'
+  app.locals.localModules.uploadRouter = './routes/upload'
   app.locals.mounts.push({ path: '/upload', code: 'uploadRouter' })
 
 
