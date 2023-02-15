@@ -33,7 +33,7 @@
   "main": "bin/express-cli.js",
   "preferGlobal": true,
   "bin": {
-    "express": "./bin/express-cli.js"
+    "batuta": "./bin/express-cli.js"
   },
   "devDependencies": {
     "eslint": "7.32.0",
