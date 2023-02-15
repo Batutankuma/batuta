@@ -345,9 +345,9 @@ function createApplication(name, dir, options, done) {
   console.log()
   console.log('   install dependencies:')
   console.log('     %s npm install', prompt)
-  console.log('        npm install prisma --save-dev')
-  console.log('        npx prisma init')
-  console.log('        npm install @prisma/client')
+  console.log('     %s npm install prisma --save-dev')
+  console.log('     %s npx prisma init')
+  console.log('     %s npm install @prisma/client')
   console.log()
   console.log('   run the app:')
 
