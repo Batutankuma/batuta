@@ -133,6 +133,22 @@ function createApplication(name, dir, options, done) {
   app.locals.modules.prisma = '@prisma/client'
   pkg.dependencies['@prisma/client'] = '~1.4.5'
 
+  //add bcrypt
+  app.locals.modules.bcryptjs = 'bcryptjs'
+  pkg.dependencies['bcryptjs'] = '~2.4.3'
+
+  //jsonwebtoken
+  app.locals.modules.jsonwebtoken = 'jsonwebtoken'
+  pkg.dependencies['jsonwebtoken'] = '~9.0.0'
+
+  //nodemailer
+  app.locals.modules.nodemailer = 'nodemailer'
+  pkg.dependencies['nodemailer'] = '~6.9.1'
+
+  //request
+  app.locals.modules.request = 'request'
+  pkg.dependencies['request'] = '~2.88.2'
+
   if (dir !== '.') {
     mkdir(dir, '.')
   }

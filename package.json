@@ -24,10 +24,15 @@
   "repository": "expressjs/generator ******",
   "license": "MIT",
   "dependencies": {
+    "@prisma/client": "^4.10.1",
+    "bcryptjs": "^2.4.3",
     "ejs": "2.6.2",
+    "jsonwebtoken": "^9.0.0",
     "minimatch": "3.0.4",
     "minimist": "1.2.5",
     "mkdirp": "0.5.1",
+    "nodemailer": "^6.9.1",
+    "request": "^2.88.2",
     "sorted-object": "2.0.1"
   },
   "main": "bin/express-cli.js",
@@ -43,6 +48,7 @@
     "eslint-plugin-promise": "5.2.0",
     "eslint-plugin-standard": "4.1.0",
     "mocha": "9.1.3",
+    "prisma": "^4.10.1",
     "rimraf": "3.0.2",
     "supertest": "6.1.4",
     "tree-kill": "1.2.2",
