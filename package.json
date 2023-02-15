@@ -21,7 +21,7 @@
     "backend",
     "api"
   ],
-  "repository": "expressjs/generator ******",
+  "repository": "https://github.com/Batutankuma/batuta",
   "license": "MIT",
   "dependencies": {
     "@prisma/client": "^4.10.1",

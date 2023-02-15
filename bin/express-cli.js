@@ -130,7 +130,6 @@ function createApplication(name, dir, options, done) {
   pkg.dependencies['cookie-parser'] = '~1.4.5'
 
   // Prisma client ***** version
-  app.locals.modules.prisma = '@prisma/client'
   pkg.dependencies['@prisma/client'] = '~1.4.5'
 
   //add bcrypt

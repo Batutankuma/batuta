@@ -3,6 +3,9 @@ var createError = require('http-errors');
 <% } -%>
 var express = require('express');
 var path = require('path');
+
+var {PrismaClient} = require('@prisma/client');
+
 <% Object.keys(modules).sort().forEach(function (variable) { -%>
 var <%- variable %> = require('<%- modules[variable] %>');
 <% }); -%>
@@ -12,6 +15,19 @@ var <%- variable %> = require('<%- localModules[variable] %>');
 <% }); -%>
 
 var app = express();
+
+//isconnecting
+async function isConnecting(){
+  try {
+    let Prisma = new PrismaClient();
+    await Prisma.$connect();
+    console.log('connecting');
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+isConnecting()
 
 <% if (view) { -%>
 // view engine setup

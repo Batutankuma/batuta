@@ -10,7 +10,7 @@
 ## Installation
 
 ```sh
-$ npm install -g express-generator
+$ npm install -g batuta
 ```
 
 ## Quick Start
@@ -29,7 +29,7 @@ Install dependencies:
 $ npm install
 ```
 
-Start your Express.js app at `http://localhost:3000/`:
+Start your Batuta.js app at `http://localhost:3000/`:
 
 ```bash
 $ npm start
