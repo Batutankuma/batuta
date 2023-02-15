@@ -99,9 +99,6 @@ function createApplication(name, dir, options, done) {
     dependencies: {
       debug: '~2.6.9',
       express: '~4.17.1'
-    },
-    "devDependencies": {
-      "prisma": "^4.7.1"
     }
   }
 
@@ -134,8 +131,6 @@ function createApplication(name, dir, options, done) {
   app.locals.uses.push('cookieParser()')
   pkg.dependencies['cookie-parser'] = '~1.4.5'
 
-  // Prisma client ***** version
-  pkg.dependencies['@prisma/client'] = '^1.4.5'
 
   //add bcrypt
   pkg.dependencies['bcryptjs'] = '^2.4.3'
@@ -350,6 +345,9 @@ function createApplication(name, dir, options, done) {
   console.log()
   console.log('   install dependencies:')
   console.log('     %s npm install', prompt)
+  console.log('        npm install prisma --save-dev')
+  console.log('        npx prisma init')
+  console.log('        npm install @prisma/client')
   console.log()
   console.log('   run the app:')
 
