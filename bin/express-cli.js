@@ -166,6 +166,29 @@ function createApplication(name, dir, options, done) {
   mkdir(dir, 'routes')
   copyTemplateMulti('js/routes', dir + '/routes', '*.js')
 
+  //file env
+  copyTemplateMulti('js', dir + '*', '.env')
+
+  //create controllers
+  mkdir(dir, 'controllers')
+  copyTemplateMulti('js/controllers', dir + '/controllers', '*.js')
+
+
+
+  //create prisma
+  mkdir(dir, 'prisma')
+  copyTemplateMulti('js/prisma', dir + '/prisma', 'schema.prisma')
+
+  //create controllers
+  mkdir(dir, 'middlewares')
+  mkdir(dir, 'middlewares/authentification')
+  mkdir(dir, 'middlewares/notification')
+  mkdir(dir, 'middlewares/storage_config')
+  copyTemplateMulti('js/middlewares', dir + '/middlewares', '*.js')
+  copyTemplateMulti('js/middlewares/authentification', dir + '/middlewares/authentification', '*.js')
+  copyTemplateMulti('js/middlewares/notification', dir + '/middlewares/notification', '*.js')
+  copyTemplateMulti('js/middlewares/storage_config', dir + '/middlewares/storage_config', '*.js')
+
   if (options.view) {
     // Copy view templates
     mkdir(dir, 'views')
@@ -224,7 +247,6 @@ function createApplication(name, dir, options, done) {
       pkg.dependencies.stylus = '0.54.5'
       break
   }
-
 
 
   // Index router mount
