@@ -76,6 +76,12 @@ describe('express(1)', function () {
         '    "express": "~4.17.1",\n' +
         '    "http-errors": "~1.7.2",\n' +
         '    "jade": "~1.11.0",\n' +
+        '    "@prisma/client": "~4.7.1",\n' +
+        '    "bcryptjs": "~2.4.3",\n' +
+        '    "jsonwebtoken": "~9.0.0",\n' +
+        '    "multer": "~1.4.5-lts.1",\n' +
+        '    "nodemailer": "~6.8.0",\n' +
+        '    "request": "~2.88.2",\n' +
         '    "morgan": "~1.10.0"\n' +
         '  }\n' +
         '}\n')
@@ -111,7 +117,7 @@ describe('express(1)', function () {
       it('should respond to HTTP request', function (done) {
         request(this.app)
           .get('/')
-          .expect(200, /<title>Express<\/title>/, done)
+          .expect(200, /<title>Batuta<\/title>/, done)
       })
 
       it('should generate a 404', function (done) {
@@ -441,7 +447,7 @@ describe('express(1)', function () {
         it('should respond to HTTP request', function (done) {
           request(this.app)
             .get('/')
-            .expect(200, /<title>Express<\/title>/, done)
+            .expect(200, /<title>Batuta<\/title>/, done)
         })
 
         it('should respond with stylesheet', function (done) {

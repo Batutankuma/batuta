@@ -1,28 +1,27 @@
 {
-  "name": "express-generator",
-  "description": "Express' application generator",
-  "version": "4.16.1",
-  "author": "TJ Holowaychuk <tj@vision-media.ca>",
-  "contributors": [
-    "Aaron Heckmann <aaron.heckmann+github@gmail.com>",
-    "Ciaran Jessup <ciaranj@gmail.com>",
-    "Douglas Christopher Wilson <doug@somethingdoug.com>",
-    "Guillermo Rauch <rauchg@gmail.com>",
-    "Jonathan Ong <me@jongleberry.com>",
-    "Roman Shtylman <shtylman+expressjs@gmail.com>"
-  ],
+  "name": "batuta",
+  "description": "Express-Generator' new structure application generator",
+  "version": "1.0.0",
+  "author": {
+    "name": "Batuta Nkuma Sael",
+    "email": "Saelnkuma@outlook.fr",
+    "url": "https://github.com/Batutankuma"
+  },
   "keywords": [
     "express",
     "framework",
+    "ministructure",
     "sinatra",
     "web",
     "rest",
     "restful",
     "router",
     "app",
+    "prisma",
+    "backend",
     "api"
   ],
-  "repository": "expressjs/generator",
+  "repository": "expressjs/generator ******",
   "license": "MIT",
   "dependencies": {
     "ejs": "2.6.2",
