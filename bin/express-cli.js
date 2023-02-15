@@ -106,6 +106,9 @@ function createApplication(name, dir, options, done) {
   var app = loadTemplate('js/app.js')
   var www = loadTemplate('js/www')
 
+  //env
+  var env = loadTemplateEnv('js/.env')
+
   // App name
   www.locals.name = name
 
@@ -178,13 +181,11 @@ function createApplication(name, dir, options, done) {
   copyTemplateMulti('js/routes', dir + '/routes', '*.js')
 
   //file env
-  copyTemplateMulti('js', dir + '*', '.env')
+  copyTemplateMulti('js', dir + '/', '.env')
 
   //create controllers
   mkdir(dir, 'controllers')
   copyTemplateMulti('js/controllers', dir + '/controllers', '*.js')
-
-
 
   //create prisma
   mkdir(dir, 'prisma')
@@ -330,6 +331,8 @@ function createApplication(name, dir, options, done) {
 
   // write files
   write(path.join(dir, 'app.js'), app.render())
+  //TODO ADD FILE ENV IN APPLICATION
+  write(path.join(dir, '.env'), env.locals())
   write(path.join(dir, 'package.json'), JSON.stringify(pkg, null, 2) + '\n')
   mkdir(dir, 'bin')
   write(path.join(dir, 'bin/www'), www.render(), MODE_0755)
@@ -345,9 +348,8 @@ function createApplication(name, dir, options, done) {
   console.log()
   console.log('   install dependencies:')
   console.log('     %s npm install', prompt)
-  console.log('     %s npm install prisma --save-dev')
-  console.log('     %s npx prisma init')
-  console.log('     %s npm install @prisma/client')
+  console.log('     %s npm install prisma --save-dev', prompt)
+  console.log('     %s npm install @prisma/client', prompt)
   console.log()
   console.log('   run the app:')
 
@@ -442,8 +444,18 @@ function launchedFromCmd() {
  * Load template file.
  */
 
+function loadTemplateEnv(name) {
+  //read file env
+  var contentsEnv = fs.readFileSync(path.join(__dirname, '..', 'templates', (name)), 'utf-8')
+
+  return {
+    locals: contentsEnv,
+  }
+}
+
 function loadTemplate(name) {
   var contents = fs.readFileSync(path.join(__dirname, '..', 'templates', (name + '.ejs')), 'utf-8')
+
   var locals = Object.create(null)
 
   function render() {
