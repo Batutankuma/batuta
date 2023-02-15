@@ -99,6 +99,9 @@ function createApplication(name, dir, options, done) {
     dependencies: {
       debug: '~2.6.9',
       express: '~4.17.1'
+    },
+    "devDependencies": {
+      "prisma": "~4.7.1"
     }
   }
 
@@ -124,6 +127,8 @@ function createApplication(name, dir, options, done) {
   app.locals.uses.push('express.json()')
   app.locals.uses.push('express.urlencoded({ extended: false })')
 
+
+
   // Cookie parser
   app.locals.modules.cookieParser = 'cookie-parser'
   app.locals.uses.push('cookieParser()')
@@ -133,19 +138,15 @@ function createApplication(name, dir, options, done) {
   pkg.dependencies['@prisma/client'] = '~1.4.5'
 
   //add bcrypt
-  app.locals.modules.bcryptjs = 'bcryptjs'
   pkg.dependencies['bcryptjs'] = '~2.4.3'
 
   //jsonwebtoken
-  app.locals.modules.jsonwebtoken = 'jsonwebtoken'
   pkg.dependencies['jsonwebtoken'] = '~9.0.0'
 
   //nodemailer
-  app.locals.modules.nodemailer = 'nodemailer'
   pkg.dependencies['nodemailer'] = '~6.9.1'
 
   //request
-  app.locals.modules.request = 'request'
   pkg.dependencies['request'] = '~2.88.2'
 
   if (dir !== '.') {
