@@ -1,6 +1,10 @@
 const https = require("https");
 const request = require("request");
 
+//create your file .env and add last variable
+const PHONENUMBER = null;
+const TOKENBASIC = null;
+
 class OrangeSMS {
     /**
      * 
@@ -8,7 +12,7 @@ class OrangeSMS {
      * @param {Mbote Mokili} message Message For Customer
      */
     sender(phoneCustomer, message) {
-        credentials = process.env.TOKENBASIC;
+        credentials = TOKENBASIC;
         var postData = "";
         postData += "grant_type=client_credentials";
         var options = {
@@ -37,7 +41,7 @@ class OrangeSMS {
 
     _send(token, phone, messagee) {
         var receveirr = "tel:" + phone;
-        var senders = "tel:" + process.env.PHONENUMBER;
+        var senders = "tel:" + PHONENUMBER;
         var headers = {
             'Authorization': "Bearer " + token,
             'Content-Type': 'application/json'
@@ -52,7 +56,7 @@ class OrangeSMS {
             }
         };
         var options = {
-            uri: `https://api.orange.com/smsmessaging/v1/outbound/tel:${process.env.PHONENUMBER}/requests`,
+            uri: `https://api.orange.com/smsmessaging/v1/outbound/tel:${PHONENUMBER}/requests`,
             method: 'POST',
             headers: headers,
             body: JSON.stringify(body)

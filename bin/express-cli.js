@@ -186,9 +186,6 @@ function createApplication(name, dir, options, done) {
   mkdir(dir, 'controllers')
   copyTemplateMulti('js/controllers', dir + '/controllers', '*.js')
 
-  //create prisma
-  mkdir(dir, 'prisma')
-  copyTemplateMulti('js/prisma', dir + '/prisma', 'schema.prisma')
 
   //create controllers
   mkdir(dir, 'middlewares')
@@ -346,8 +343,6 @@ function createApplication(name, dir, options, done) {
   console.log()
   console.log('   install dependencies:')
   console.log('     %s npm install', prompt)
-  console.log('     %s npm install prisma --save-dev', prompt)
-  console.log('     %s npm install @prisma/client', prompt)
   console.log()
   console.log('   run the app:')
 

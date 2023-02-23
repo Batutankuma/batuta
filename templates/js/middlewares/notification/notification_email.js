@@ -1,15 +1,19 @@
 const nodemailer = require('nodemailer');
-
+// INFORMATION EMAIL
+var USERNAME = "exemple@gmail.com"
+var PASSWORD = "tonpassworld"
+var PORT = 6422
+var HOST = "xyzapplication.com"
 
 class Email {
     sendEmail = async (recev, title, message) => {
-        let user = process.env.USERNAME;
-        let pwd = process.env.PASSWORD;
+        let user = USERNAME;
+        let pwd = PASSWORD;
 
         // create transport
         let transporter = nodemailer.createTransport({
-            host: process.env.HOST,
-            port: process.env.PORT,
+            host: HOST,
+            port: PORT,
             secureConnection: false,// true for 465, false for other ports
             auth: {
                 user: user, // generated ethereal user
