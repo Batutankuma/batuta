@@ -1,6 +1,6 @@
-[![Express Logo](https://i.cloudup.com/zfY6lL7eFa-3000x3000.png)](http://expressjs.com/)
+[![Express Logo](bttjs.png)](http://expressjs.com/)
 
-[Express'](https://www.npmjs.com/package/express) application generator.
+[Batutajs](https://github.com/Batutankuma/batuta) is a mini fraimwork based on express-generator.
 
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
@@ -56,10 +56,10 @@ This generator can also be further configured with the following command line fl
 [MIT](LICENSE)
 
 [npm-image]: https://img.shields.io/npm/v/express-generator.svg
-[npm-url]: https://npmjs.org/package/express-generator
+[npm-url]: https://npmjs.org/package/batuta
 [appveyor-image]: https://img.shields.io/appveyor/ci/dougwilson/generator/master.svg?label=windows
 [appveyor-url]: https://ci.appveyor.com/project/dougwilson/generator
 [downloads-image]: https://img.shields.io/npm/dm/express-generator.svg
-[downloads-url]: https://npmjs.org/package/express-generator
+[downloads-url]: https://npmjs.org/package/batuta
 [github-actions-ci-image]: https://img.shields.io/github/workflow/status/expressjs/generator/ci/master?label=linux
 [github-actions-ci-url]: https://github.com/expressjs/generator/actions/workflows/ci.yml
