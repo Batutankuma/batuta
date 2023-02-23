@@ -3,9 +3,7 @@
 [Batutajs](https://github.com/Batutankuma/batuta) is a mini fraimwork based on express-generator.
 
 [![NPM Version][npm-image]][npm-url]
-[![NPM Downloads][downloads-image]][downloads-url]
-[![Linux Build][github-actions-ci-image]][github-actions-ci-url]
-[![Windows Build][appveyor-image]][appveyor-url]
+[![alt-text][appveyor-size]][appveyor-url]
 
 ## Installation
 
@@ -55,9 +53,10 @@ This generator can also be further configured with the following command line fl
 
 [MIT](LICENSE)
 
-[npm-image]: https://img.shields.io/npm/v/express-generator.svg
+[npm-image]: https://img.shields.io/npm/v/batuta
 [npm-url]: https://npmjs.org/package/batuta
 [appveyor-image]: https://img.shields.io/appveyor/ci/dougwilson/generator/master.svg?label=windows
+[appveyor-size]: https://img.shields.io/github/languages/code-size/Batutankuma/batuta
 [appveyor-url]: https://ci.appveyor.com/project/dougwilson/generator
 [downloads-image]: https://img.shields.io/npm/dm/express-generator.svg
 [downloads-url]: https://npmjs.org/package/batuta
