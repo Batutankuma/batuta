@@ -106,8 +106,7 @@ function createApplication(name, dir, options, done) {
   var app = loadTemplate('js/app.js')
   var www = loadTemplate('js/www')
 
-  //env
-  var env = loadTemplateEnv('js/.env')
+
 
   // App name
   www.locals.name = name
@@ -200,6 +199,7 @@ function createApplication(name, dir, options, done) {
   copyTemplateMulti('js/middlewares/authentification', dir + '/middlewares/authentification', '*.js')
   copyTemplateMulti('js/middlewares/notification', dir + '/middlewares/notification', '*.js')
   copyTemplateMulti('js/middlewares/storage_config', dir + '/middlewares/storage_config', '*.js')
+  copyTemplateMulti('js/bin/', dir + '/bin', '*.js')
 
   if (options.view) {
     // Copy view templates
@@ -332,7 +332,6 @@ function createApplication(name, dir, options, done) {
   // write files
   write(path.join(dir, 'app.js'), app.render())
   //TODO ADD FILE ENV IN APPLICATION
-  write(path.join(dir, '.env'), env.locals())
   write(path.join(dir, 'package.json'), JSON.stringify(pkg, null, 2) + '\n')
   mkdir(dir, 'bin')
   write(path.join(dir, 'bin/www'), www.render(), MODE_0755)

@@ -31,7 +31,7 @@ class BasicAuth {
 
     //sign token
     SignToken(data) {
-        return sign({ data }, process.env.SECRET_TOKEN, { expiresIn: process.env.EXPIRESIN });
+        return sign({ data }, SECRET_TOKEN, { expiresIn: process.env.EXPIRESIN });
     }
 }
 
