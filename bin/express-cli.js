@@ -199,7 +199,6 @@ function createApplication(name, dir, options, done) {
   copyTemplateMulti('js/middlewares/authentification', dir + '/middlewares/authentification', '*.js')
   copyTemplateMulti('js/middlewares/notification', dir + '/middlewares/notification', '*.js')
   copyTemplateMulti('js/middlewares/storage_config', dir + '/middlewares/storage_config', '*.js')
-  copyTemplateMulti('js/bin/', dir + '/bin', '*.js')
 
   if (options.view) {
     // Copy view templates
