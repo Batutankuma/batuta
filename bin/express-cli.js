@@ -142,6 +142,8 @@ function createApplication(name, dir, options, done) {
 
   //nodemailer
   pkg.dependencies['nodemailer'] = '^6.9.1'
+  //nodemailer
+  pkg.dependencies['multer'] = '1.4.5-lts.1'
 
   //request
   pkg.dependencies['request'] = '^2.88.2'

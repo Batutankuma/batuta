@@ -1,7 +1,7 @@
 {
   "name": "batuta",
   "description": "Batuta: is a framework based on the express-generator structure, which adds other missing modules for a backend application",
-  "version": "0.0.4",
+  "version": "0.1.",
   "author": {
     "name": "Batuta Nkuma Sael",
     "email": "Saelnkuma@outlook.fr",
@@ -27,7 +27,6 @@
   "license": "MIT",
   "dependencies": {
     "ejs": "^3.1.8",
-    "multer":"1.4.5-lts.1",
     "minimatch": "^3.1.2",
     "minimist": "^1.2.8",
     "mkdirp": "^0.5.6",
