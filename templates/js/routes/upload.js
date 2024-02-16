@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var Notification = require('./../middlewares/notification/prisma.notification');
+var Notification = require('./../middlewares/notification/notification');
 var {_success} = new Notification();
 var multer = require('./../middlewares/storage_config/multer.config');
 

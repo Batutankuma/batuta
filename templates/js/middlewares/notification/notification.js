@@ -1,4 +1,4 @@
-class NotificationPrisma {
+class Notification {
     //send success message
     async _success(res, status = 200, message) {
         return res.status(200).json({ status: status, message: message });
@@ -15,4 +15,4 @@ class NotificationPrisma {
     }
 }
 
-module.exports = NotificationPrisma;
+module.exports = Notification;
