@@ -27,6 +27,7 @@
   "license": "MIT",
   "dependencies": {
     "ejs": "^3.1.8",
+    "multer":"1.4.5-lts.1",
     "minimatch": "^3.1.2",
     "minimist": "^1.2.8",
     "mkdirp": "^0.5.6",
